@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nontoxinco - Anti-Microplastic Oral Care | Reclaim Your Oral Health</title>
+    <meta name="description" content="Nontoxinco: Clinical-grade, microplastic-free oral care. 10% nHAp toothpaste, biodegradable silk floss, alcohol-free mouthwash. Reclaim your oral health naturally.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a4d3e;
+            --text-dark: #1a1a1a;
+            --text-light: #6b6b6b;
+            --bg-light: #faf8f6;
+            --bg-white: #ffffff;
+            --accent-green: #2d7a5f;
+            --border-light: #e8e6e2;
+            --success: #2d7a5f;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 1.5rem;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-green);
+            transform: translateY(-2px);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .hero .subheading {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin-top: 2rem;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e6e2 100%);
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Problem/Solution Section */
+        .problem-solution {
+            background: var(--bg-white);
+            padding: 3rem 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .problem-solution-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .problem-block, .solution-block {
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .problem-block {
+            background: #fef5f3;
+            border-left: 4px solid #d97f6f;
+        }
+
+        .solution-block {
+            background: #f0f8f5;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .problem-block h3, .solution-block h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .problem-block p, .solution-block p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .how-it-works h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .step {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Products Section */
+        .products {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .products h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(26, 77, 62, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e6e2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-tagline {
+            color: var(--accent-green);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .product-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .bundle-highlight {
+            background: #f0f8f5;
+            border: 2px solid var(--accent-green);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .bundle-highlight h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .bundle-highlight .bundle-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin: 1rem 0;
+        }
+
+        .bundle-highlight p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            background: var(--bg-white);
+            padding: 3rem 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .ingredients-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ingredients h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .ingredient-item {
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .ingredient-name {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .ingredient-benefit {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Sustainability Section */
+        .sustainability {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .sustainability h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .sustainability-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .sustainability-item {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .sustainability-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sustainability-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .sustainability-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-white);
+            padding: 3rem 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-green);
+        }
+
+        .testimonial-text {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Email Capture */
+        .email-capture {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-green) 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .email-capture-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .email-capture h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .email-capture p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .email-form input {
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .email-form input::placeholder {
+            color: #999;
+        }
+
+        .email-form button {
+            background: white;
+            color: var(--primary-color);
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .email-form button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Popup Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: var(--bg-white);
+            margin: auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translate(-50%, -60%);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            color: var(--text-light);
+            float: right;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--text-dark);
+        }
+
+        .modal h2 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .modal p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .modal-form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: inherit;
+        }
+
+        .modal-form button {
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .modal-form button:hover {
+            background: var(--accent-green);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .problem-solution-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sustainability-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ingredient-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .email-form {
+                flex-direction: row;
+            }
+
+            .email-form input {
+                flex: 1;
+            }
+
+            .email-form button {
+                flex: 0 0 auto;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .steps {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .ingredient-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Utility Classes */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-3 {
+            margin-top: 3rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Nontoxinco</div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#sustainability">Sustainability</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+            <button class="cta-button" onclick="openPopup()">Shop Now</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Reclaim Your Oral Health. Naturally.</h1>
+        <p class="subheading">Clinical-grade, microplastic-free oral care. 10% nano-hydroxyapatite toothpaste, biodegradable silk floss, and alcohol-free mouthwash. The frontier brand for conscious consumers.</p>
+        <div class="hero-cta">
+            <button class="cta-button" onclick="openPopup()">Shop the Core Kit</button>
+            <button class="cta-button cta-button-secondary" onclick="document.getElementById('learn-more').scrollIntoView();">Learn More</button>
+        </div>
+        <div class="hero-image">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🧴</div>
+                <p>Nontoxinco Core Kit</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Toothpaste • Floss • Mouthwash</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution" id="learn-more">
+        <div class="problem-solution-content">
+            <div class="problem-block">
+                <h3>🚫 The Problem</h3>
+                <p>Over a billion plastic toothpaste tubes end up in landfills annually. Your conventional oral care is packed with microplastics, harsh chemicals, and unsustainable packaging. You're brushing your teeth with toxins and destroying the planet in the process. Your mouth—and the Earth—deserve better.</p>
+            </div>
+            <div class="solution-block">
+                <h3>✨ The Nontoxinco Solution</h3>
+                <p>We engineered a new standard for oral care. 10% nano-hydroxyapatite for enamel repair, biodegradable silk floss in refillable steel vials, and alcohol-free mouthwash with Dead Sea salts. Zero microplastics. Zero fluoride. Zero compromise. Clinical efficacy meets clean minimalism.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2>Your Daily Ritual</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Brush</h3>
+                <p>Micro-Barrier Toothpaste with 10% nHAp actively repairs and strengthens your enamel while reducing sensitivity.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Floss</h3>
+                <p>Silk-Shield biodegradable floss glides effortlessly, removing plaque without plastic waste or harsh materials.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Rinse</h3>
+                <p>Ion-Balanced Mouthwash harmonizes your oral microbiome with Dead Sea salts, no alcohol burn, just pure freshness.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Feel the Difference</h3>
+                <p>Stronger teeth, fresher breath, healthier gums, and the peace of mind that you're not harming the planet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <h2>Our Hero Products</h2>
+
+        <!-- Bundle Highlight -->
+        <div class="bundle-highlight">
+            <h3>The Core Kit</h3>
+            <p>Everything you need for complete oral wellness</p>
+            <div class="bundle-price">$45</div>
+            <p>Includes: Micro-Barrier Toothpaste • Silk-Shield Floss • Ion-Balanced Mouthwash</p>
+            <button class="cta-button" onclick="openPopup()">Add to Cart</button>
+        </div>
+
+        <!-- Individual Products -->
+        <div class="products-grid">
+            <!-- Micro-Barrier Toothpaste -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧴</div>
+                        <p>Micro-Barrier Toothpaste</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-tagline">Enamel Repair</div>
+                    <div class="product-name">Micro-Barrier Toothpaste</div>
+                    <p class="product-description">10% nano-hydroxyapatite formula for active enamel repair and sensitivity relief. Fluoride-free, microplastic-free, and clinically effective.</p>
+                    <ul class="product-features">
+                        <li>10% Nano-Hydroxyapatite (nHAp)</li>
+                        <li>Fluoride-Free</li>
+                        <li>Reduces Sensitivity</li>
+                        <li>Recyclable Aluminum Tube</li>
+                        <li>Peppermint Flavor</li>
+                    </ul>
+                    <div class="product-price">$18</div>
+                    <button class="cta-button" onclick="openPopup()">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Silk-Shield Floss -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧵</div>
+                        <p>Silk-Shield Floss</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-tagline">Plastic-Free</div>
+                    <div class="product-name">Silk-Shield Floss</div>
+                    <p class="product-description">100% biodegradable mulberry silk floss in a refillable steel vial. Superior plaque removal without plastic waste.</p>
+                    <ul class="product-features">
+                        <li>Biodegradable Mulberry Silk</li>
+                        <li>Refillable Steel Vial</li>
+                        <li>Zero Plastic Waste</li>
+                        <li>Smooth & Effective</li>
+                        <li>Includes 1 Refill</li>
+                    </ul>
+                    <div class="product-price">$16</div>
+                    <button class="cta-button" onclick="openPopup()">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Ion-Balanced Mouthwash -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🧪</div>
+                        <p>Ion-Balanced Mouthwash</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-tagline">Microbiome Balance</div>
+                    <div class="product-name">Ion-Balanced Mouthwash</div>
+                    <p class="product-description">Alcohol-free formula with Dead Sea salts to harmonize your oral microbiome. No burn, just pure freshness and gum health.</p>
+                    <ul class="product-features">
+                        <li>Alcohol-Free</li>
+                        <li>Dead Sea Salt Formula</li>
+                        <li>Supports Oral Microbiome</li>
+                        <li>Apothecary Glass Bottle</li>
+                        <li>Fresh Mint Flavor</li>
+                    </ul>
+                    <div class="product-price">$14</div>
+                    <button class="cta-button" onclick="openPopup()">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients" id="ingredients">
+        <div class="ingredients-content">
+            <h2>Ingredient Transparency</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">Every ingredient in Nontoxinco is selected for proven efficacy and safety. We believe in radical transparency about what goes into your mouth.</p>
+            <div class="ingredient-grid">
+                <div class="ingredient-item">
+                    <div class="ingredient-name">🔬 10% Nano-Hydroxyapatite (nHAp)</div>
+                    <div class="ingredient-benefit">The biomimetic mineral that makes up your tooth enamel. Actively repairs enamel, reduces sensitivity, and naturally whitens teeth. Fluoride-free alternative backed by clinical research.</div>
+                </div>
+                <div class="ingredient-item">
+                    <div class="ingredient-name">🌊 Dead Sea Salts</div>
+                    <div class="ingredient-benefit">Rich in minerals and trace elements. Supports gum health, balances oral pH, and promotes a thriving oral microbiome. Used in our alcohol-free mouthwash.</div>
+                </div>
+                <div class="ingredient-item">
+                    <div class="ingredient-name">🌿 Mulberry Silk</div>
+                    <div class="ingredient-benefit">100% biodegradable and compostable. Smooth, strong, and effective for plaque removal. Naturally antimicrobial and gentle on gums.</div>
+                </div>
+                <div class="ingredient-item">
+                    <div class="ingredient-name">🍃 Plant-Based Glycerin</div>
+                    <div class="ingredient-benefit">Natural humectant that keeps your mouth hydrated. Derived from sustainable sources, not synthetic.</div>
+                </div>
+                <div class="ingredient-item">
+                    <div class="ingredient-name">🌱 Essential Oils</div>
+                    <div class="ingredient-benefit">Peppermint and spearmint for natural flavor and antimicrobial benefits. No synthetic flavors or artificial additives.</div>
+                </div>
+                <div class="ingredient-item">
+                    <div class="ingredient-name">✅ What We Exclude</div>
+                    <div class="ingredient-benefit">No microplastics, fluoride, SLS, parabens, artificial dyes, synthetic flavors, or harsh chemicals. Just pure, powerful ingredients.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability" id="sustainability">
+        <h2>Our Sustainability Promise</h2>
+        <div class="sustainability-grid">
+            <div class="sustainability-item">
+                <div class="sustainability-icon">♻️</div>
+                <h3>Infinitely Recyclable</h3>
+                <p>Our aluminum toothpaste tubes and steel floss vials are infinitely recyclable. Zero plastic waste, zero compromise on quality.</p>
+            </div>
+            <div class="sustainability-item">
+                <div class="sustainability-icon">🌍</div>
+                <h3>Microplastic-Free</h3>
+                <p>100% free from microplastics. Our formulas are designed to protect your health and keep our oceans clean.</p>
+            </div>
+            <div class="sustainability-item">
+                <div class="sustainability-icon">🌱</div>
+                <h3>Ethically Sourced</h3>
+                <p>Every ingredient is sourced responsibly. We partner with suppliers who share our commitment to environmental stewardship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-content">
+            <h2>Loved by Our Community</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">"My sensitive teeth are completely gone. I've tried everything, and Nontoxinco is the first toothpaste that actually works. Plus, I love knowing I'm not putting microplastics in my mouth."</div>
+                    <div class="testimonial-author">Sarah M.</div>
+                    <div class="testimonial-role">Verified Customer</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"The silk floss is a game-changer. It's so smooth and strong, and I finally feel good about my flossing routine. The refillable vial is beautiful on my bathroom counter."</div>
+                    <div class="testimonial-author">James T.</div>
+                    <div class="testimonial-role">Verified Customer</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"As a dentist, I'm impressed by the science behind Nontoxinco. The nHAp formulation is legit, and I'm recommending it to all my patients who want a fluoride-free option."</div>
+                    <div class="testimonial-author">Dr. Lisa Chen</div>
+                    <div class="testimonial-role">DDS, Dental Professional</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"Finally, a brand that walks the walk on sustainability. The packaging is gorgeous, the products work, and I'm not contributing to ocean plastic. This is the future of oral care."</div>
+                    <div class="testimonial-author">Emma R.</div>
+                    <div class="testimonial-role">Verified Customer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Capture Section -->
+    <section class="email-capture">
+        <div class="email-capture-content">
+            <h2>Join the Pure Smile Revolution</h2>
+            <p>Get 10% off your first order and stay updated on the future of oral care.</p>
+            <form class="email-form" onsubmit="handleEmailSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Get 10% Off</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#products">Core Kit</a></li>
+                    <li><a href="#products">Bundles</a></li>
+                    <li><a href="#products">Subscriptions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Learn</h4>
+                <ul>
+                    <li><a href="#ingredients">Ingredients</a></li>
+                    <li><a href="#sustainability">Sustainability</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/">About Us</a></li>
+                    <li><a href="/">Contact</a></li>
+                    <li><a href="/">Privacy Policy</a></li>
+                    <li><a href="/">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nontoxinco. All rights reserved. Reclaim your oral health. Naturally.</p>
+        </div>
+    </footer>
+
+    <!-- Email Capture Popup Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closePopup()">&times;</span>
+            <h2>Join the Revolution</h2>
+            <p>Get 10% off your first Nontoxinco order and be the first to know about our latest innovations.</p>
+            <form class="modal-form" onsubmit="handleModalSubmit(event)">
+                <input type="text" placeholder="First Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <button type="submit">Unlock My Discount</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: var(--text-light);">We respect your privacy. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <script>
+        // Popup Modal Functions
+        function openPopup() {
+            document.getElementById('emailModal').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('emailModal').style.display = 'none';
+        }
+
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const firstName = form.querySelector('input[placeholder="First Name"]').value;
+            const email = form.querySelector('input[placeholder="Email Address"]').value;
+            
+            // Simulate form submission
+            alert(`Thank you, ${firstName}! Check your email for your 10% discount code.`);
+            closePopup();
+            form.reset();
+        }
+
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const email = form.querySelector('input[type="email"]').value;
+            
+            // Simulate form submission
+            alert(`Thank you! Check your email for your 10% discount code.`);
+            form.reset();
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('emailModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Show popup after 5 seconds for first-time visitors
+        setTimeout(() => {
+            if (!sessionStorage.getItem('popupShown')) {
+                openPopup();
+                sessionStorage.setItem('popupShown', 'true');
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
