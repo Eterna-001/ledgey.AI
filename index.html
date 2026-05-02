@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NONTOXICCO — Clean Oral Care</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Suisse+Intl:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'cream': '#F7F4EF',
+          'cream-dark': '#EDE9E2',
+          'ink': '#1A1A18',
+          'stone': '#8A8680',
+          'warm-gray': '#C8C4BC',
+          'off-white': '#FAFAF8',
+        },
+        fontFamily: {
+          'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+          'sans': ['DM Sans', 'Helvetica Neue', 'sans-serif'],
+        },
+        letterSpacing: {
+          'widest2': '0.25em',
+          'widest3': '0.35em',
+        },
+        fontSize: {
+          '7xl': '5rem',
+          '8xl': '6.5rem',
+          '9xl': '8rem',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #F7F4EF;
+    color: #1A1A18;
+    font-family: 'DM Sans', Helvetica Neue, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+/* NAV */
+nav a { transition: opacity 0.2s ease; }
+nav a:hover { opacity: 0.45; }
+
+/* HERO */
+.hero-img {
+width: 100%;
+height: 100vh;
+min-height: 600px;
+object-fit: cover;
+object-position: center 30%;
+display: block;
+filter: brightness(0.88) contrast(0.96);
+}
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(to bottom, rgba(26,26,24,0.08) 0%, rgba(26,26,24,0.22) 100%);
+}
+
+/* PRODUCT CARDS */
+.product-card {
+border: 1px solid #C8C4BC;
+transition: border-color 0.25s ease;
+}
+.product-card:hover { border-color: #8A8680; }
+.product-img-area {
+background-color: #EDE9E2;
+aspect-ratio: 3/4;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.btn-primary {
+border: 1px solid #1A1A18;
+background: transparent;
+color: #1A1A18;
+letter-spacing: 0.18em;
+font-size: 0.7rem;
+padding: 0.85rem 2rem;
+text-transform: uppercase;
+transition: background 0.22s ease, color 0.22s ease;
+cursor: pointer;
+}
+.btn-primary:hover {
+background: #1A1A18;
+color: #F7F4EF;
+}
+.btn-hero {
+border: 1px solid rgba(247,244,239,0.75);
+background: transparent;
+color: #F7F4EF;
+letter-spacing: 0.2em;
+font-size: 0.68rem;
+padding: 0.9rem 2.4rem;
+text-transform: uppercase;
+font-family: ‘DM Sans’, sans-serif;
+font-weight: 400;
+transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+cursor: pointer;
+}
+.btn-hero:hover {
+background: rgba(247,244,239,0.92);
+color: #1A1A18;
+border-color: rgba(247,244,239,0.92);
+}
+
+/* INGREDIENT NUMBERS */
+.ingredient-num {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 2.8rem;
+font-weight: 300;
+line-height: 1;
+color: #C8C4BC;
+letter-spacing: -0.02em;
+}
+
+/* LIFESTYLE BREAK */
+.lifestyle-img {
+width: 100%;
+height: 70vh;
+min-height: 420px;
+object-fit: cover;
+object-position: center 40%;
+display: block;
+filter: brightness(0.84) contrast(0.97) saturate(0.85);
+}
+
+/* DIVIDER */
+.divider {
+border: none;
+border-top: 1px solid #C8C4BC;
+}
+
+/* TESTIMONIAL */
+.testimonial-quote {
+font-family: ‘Cormorant Garamond’, serif;
+font-weight: 300;
+font-style: italic;
+}
+
+/* FOOTER */
+footer a { transition: opacity 0.2s ease; }
+footer a:hover { opacity: 0.45; }
+
+/* SUBTLE LABEL */
+.label {
+font-family: ‘DM Sans’, sans-serif;
+font-size: 0.65rem;
+font-weight: 400;
+letter-spacing: 0.28em;
+text-transform: uppercase;
+color: #8A8680;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+.hero-headline { font-size: 3.2rem !important; }
+.brand-body { font-size: 1.1rem !important; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-14 py-6" style="background: transparent;">
+  <div class="label" style="color: rgba(247,244,239,0.65);">Est. 2024</div>
+  <a href="#" class="font-serif text-xl tracking-widest2" style="color: #F7F4EF; font-weight: 300; font-size: 1.1rem; letter-spacing: 0.2em;">NONTOXICCO</a>
+  <div class="hidden md:flex items-center gap-10">
+    <a href="#products" class="label" style="color: rgba(247,244,239,0.65);">Products</a>
+    <a href="#philosophy" class="label" style="color: rgba(247,244,239,0.65);">Philosophy</a>
+    <a href="#" class="label" style="color: rgba(247,244,239,0.65);">Contact</a>
+  </div>
+  <button class="md:hidden label" style="color: rgba(247,244,239,0.65); background: none; border: none; cursor: pointer;">Menu</button>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+
+<section class="relative w-full" style="height: 100vh; min-height: 600px;">
+  <img
+    src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1800&q=80&auto=format&fit=crop"
+    alt="Alpine landscape"
+    class="hero-img"
+    style="position: absolute; inset: 0; width: 100%; height: 100%;"
+  >
+  <div class="hero-overlay"></div>
+  <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6" style="padding-top: 4rem;">
+    <p class="label mb-8" style="color: rgba(247,244,239,0.6);">Non-toxic oral care</p>
+    <h1 class="font-serif hero-headline" style="font-size: clamp(3rem, 6vw, 6rem); font-weight: 300; color: #F7F4EF; line-height: 1.06; letter-spacing: -0.01em; max-width: 720px;">
+      A cleaner standard<br>for daily care.
+    </h1>
+    <p class="mt-7 mb-12 font-sans" style="font-size: 0.9rem; font-weight: 300; color: rgba(247,244,239,0.72); letter-spacing: 0.04em; max-width: 380px; line-height: 1.75;">
+      Formulated without compromise. Made for those who hold their daily ritual to a higher standard.
+    </p>
+    <button class="btn-hero" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+      Explore Products
+    </button>
+  </div>
+</section>
+
+<!-- ═══ BRAND STATEMENT ═══ -->
+
+<section class="px-6 md:px-20 lg:px-40" style="padding-top: 9rem; padding-bottom: 9rem;">
+  <div class="max-w-3xl mx-auto">
+    <p class="label mb-10">Our conviction</p>
+    <p class="brand-body font-serif" style="font-size: clamp(1.25rem, 2.2vw, 1.75rem); font-weight: 300; line-height: 1.75; color: #1A1A18;">
+      Most oral care products are built around convenience and cost. NONTOXICCO is built around integrity. Every formula begins with a single question — would we put this in our own bodies, every single day? If the answer is anything less than certain, we start again.
+    </p>
+    <div class="mt-16 pt-16" style="border-top: 1px solid #C8C4BC;">
+      <div class="flex flex-col md:flex-row gap-12 md:gap-0 md:justify-between">
+        <div>
+          <p class="font-serif" style="font-size: 2.6rem; font-weight: 300; color: #1A1A18; letter-spacing: -0.02em;">100%</p>
+          <p class="label mt-2">Transparent ingredients</p>
+        </div>
+        <div>
+          <p class="font-serif" style="font-size: 2.6rem; font-weight: 300; color: #1A1A18; letter-spacing: -0.02em;">Zero</p>
+          <p class="label mt-2">Synthetic fillers</p>
+        </div>
+        <div>
+          <p class="font-serif" style="font-size: 2.6rem; font-weight: 300; color: #1A1A18; letter-spacing: -0.02em;">Daily</p>
+          <p class="label mt-2">Ritual-grade formulation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCTS ═══ -->
+
+<section id="products" style="background-color: #EDE9E2; padding-top: 7rem; padding-bottom: 7rem;">
+  <div class="px-6 md:px-14 lg:px-20 max-w-screen-xl mx-auto">
+    <div class="flex items-end justify-between mb-14">
+      <div>
+        <p class="label mb-3">The collection</p>
+        <h2 class="font-serif" style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.01em;">Three essentials.<br>No excess.</h2>
+      </div>
+      <a href="#" class="hidden md:block label" style="color: #8A8680; text-decoration: underline; text-underline-offset: 4px;">View all</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+```
+  <!-- Toothpaste -->
+  <div class="product-card" style="background: #F7F4EF;">
+    <div class="product-img-area">
+      <p class="label" style="color: #C8C4BC;">Product image</p>
+    </div>
+    <div class="px-7 py-8">
+      <p class="label mb-2" style="color: #8A8680;">Toothpaste</p>
+      <h3 class="font-serif" style="font-size: 1.55rem; font-weight: 300; letter-spacing: -0.01em; line-height: 1.2;">Pure White<br>Mineral Paste</h3>
+      <p class="mt-4 font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680; line-height: 1.7; letter-spacing: 0.01em;">
+        Hydroxyapatite-based whitening formula. Free of fluoride, SLS, and artificial abrasives.
+      </p>
+      <div class="mt-8 flex items-center justify-between">
+        <p class="font-serif" style="font-size: 1.2rem; font-weight: 300;">$28</p>
+        <button class="btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mouthwash -->
+  <div class="product-card" style="background: #F7F4EF;">
+    <div class="product-img-area">
+      <p class="label" style="color: #C8C4BC;">Product image</p>
+    </div>
+    <div class="px-7 py-8">
+      <p class="label mb-2" style="color: #8A8680;">Mouthwash</p>
+      <h3 class="font-serif" style="font-size: 1.55rem; font-weight: 300; letter-spacing: -0.01em; line-height: 1.2;">Botanical<br>Rinse</h3>
+      <p class="mt-4 font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680; line-height: 1.7; letter-spacing: 0.01em;">
+        Oil-pulling meets modern formulation. Spearmint, zinc, and Nordic birch bark extract.
+      </p>
+      <div class="mt-8 flex items-center justify-between">
+        <p class="font-serif" style="font-size: 1.2rem; font-weight: 300;">$32</p>
+        <button class="btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flossers -->
+  <div class="product-card" style="background: #F7F4EF;">
+    <div class="product-img-area">
+      <p class="label" style="color: #C8C4BC;">Product image</p>
+    </div>
+    <div class="px-7 py-8">
+      <p class="label mb-2" style="color: #8A8680;">Flossers</p>
+      <h3 class="font-serif" style="font-size: 1.55rem; font-weight: 300; letter-spacing: -0.01em; line-height: 1.2;">Silk &amp; Candelilla<br>Flossers</h3>
+      <p class="mt-4 font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680; line-height: 1.7; letter-spacing: 0.01em;">
+        Compostable picks coated in natural wax. No PFAS. No compromise on feel.
+      </p>
+      <div class="mt-8 flex items-center justify-between">
+        <p class="font-serif" style="font-size: 1.2rem; font-weight: 300;">$18</p>
+        <button class="btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ═══ INGREDIENT PHILOSOPHY ═══ -->
+
+<section id="philosophy" class="px-6 md:px-14 lg:px-20 max-w-screen-xl mx-auto" style="padding-top: 9rem; padding-bottom: 9rem;">
+  <div class="max-w-4xl">
+    <p class="label mb-4">Ingredient standards</p>
+    <h2 class="font-serif" style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 5rem;">
+      What we include.<br>What we refuse.
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+    <div class="py-10 pr-0 md:pr-20" style="border-top: 1px solid #C8C4BC;">
+      <div class="ingredient-num">01</div>
+      <h3 class="font-serif mt-5 mb-3" style="font-size: 1.3rem; font-weight: 400; letter-spacing: -0.01em;">Full disclosure, always</h3>
+      <p class="font-sans" style="font-size: 0.82rem; font-weight: 300; color: #8A8680; line-height: 1.8;">Every ingredient is named, sourced, and explained. No proprietary blends. No hidden actives. If it is in the formula, it is on the label — with a reason.</p>
+    </div>
+    <div class="py-10 pl-0 md:pl-20" style="border-top: 1px solid #C8C4BC;">
+      <div class="ingredient-num">02</div>
+      <h3 class="font-serif mt-5 mb-3" style="font-size: 1.3rem; font-weight: 400; letter-spacing: -0.01em;">No substances of concern</h3>
+      <p class="font-sans" style="font-size: 0.82rem; font-weight: 300; color: #8A8680; line-height: 1.8;">Triclosan, SLS, parabens, PFAS, synthetic dyes, and microplastics are absent from every product. We hold ourselves to a standard that goes well beyond regulatory minimums.</p>
+    </div>
+    <div class="py-10 pr-0 md:pr-20" style="border-top: 1px solid #C8C4BC;">
+      <div class="ingredient-num">03</div>
+      <h3 class="font-serif mt-5 mb-3" style="font-size: 1.3rem; font-weight: 400; letter-spacing: -0.01em;">Tested for daily safety</h3>
+      <p class="font-sans" style="font-size: 0.82rem; font-weight: 300; color: #8A8680; line-height: 1.8;">Oral care is used twice daily, every day, for a lifetime. We formulate with cumulative exposure in mind — not single-use tolerances.</p>
+    </div>
+    <div class="py-10 pl-0 md:pl-20" style="border-top: 1px solid #C8C4BC;">
+      <div class="ingredient-num">04</div>
+      <h3 class="font-serif mt-5 mb-3" style="font-size: 1.3rem; font-weight: 400; letter-spacing: -0.01em;">Sourced with intention</h3>
+      <p class="font-sans" style="font-size: 0.82rem; font-weight: 300; color: #8A8680; line-height: 1.8;">Raw materials are traceable to origin. Where botanical, wildcrafted or certified organic. Where mineral, independently assayed for purity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIFESTYLE BREAK ═══ -->
+
+<section style="width: 100%; overflow: hidden;">
+  <div style="position: relative;">
+    <img
+      src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1800&q=80&auto=format&fit=crop"
+      alt="Hiking in European mountains"
+      class="lifestyle-img"
+    >
+    <div style="position: absolute; inset: 0; background: rgba(26,26,24,0.1);"></div>
+    <div style="position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); text-align: center;">
+      <p class="font-serif" style="font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 300; color: rgba(247,244,239,0.88); letter-spacing: 0.01em; font-style: italic;">
+        "Purity is a practice, not a promise."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+
+<section style="background-color: #F7F4EF; padding-top: 8rem; padding-bottom: 8rem;">
+  <div class="px-6 md:px-14 lg:px-20 max-w-screen-xl mx-auto">
+    <p class="label mb-14 text-center">What people say</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+
+```
+  <div>
+    <p class="testimonial-quote font-serif" style="font-size: 1.2rem; font-weight: 300; line-height: 1.75; color: #1A1A18;">
+      "I did not expect to feel the difference on the first use. The paste is unlike anything I have tried from a conventional brand — lighter, cleaner, and completely free of that synthetic aftertaste."
+    </p>
+    <div class="mt-7" style="border-top: 1px solid #C8C4BC; padding-top: 1.25rem;">
+      <p class="font-sans" style="font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em; color: #8A8680;">M. Laurent — Lyon, France</p>
+    </div>
+  </div>
+
+  <div>
+    <p class="testimonial-quote font-serif" style="font-size: 1.2rem; font-weight: 300; line-height: 1.75; color: #1A1A18;">
+      "The rinse replaced a product I had used for ten years. The botanical formula is gentle enough for daily use, and my dentist noticed a visible improvement in gum health within three months."
+    </p>
+    <div class="mt-7" style="border-top: 1px solid #C8C4BC; padding-top: 1.25rem;">
+      <p class="font-sans" style="font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em; color: #8A8680;">S. Eriksson — Stockholm, Sweden</p>
+    </div>
+  </div>
+
+  <div>
+    <p class="testimonial-quote font-serif" style="font-size: 1.2rem; font-weight: 300; line-height: 1.75; color: #1A1A18;">
+      "The packaging, the texture, the scent — everything signals care. This is what I wanted when I stopped buying products from the pharmacy shelf. NONTOXICCO filled a gap I had been looking to fill for years."
+    </p>
+    <div class="mt-7" style="border-top: 1px solid #C8C4BC; padding-top: 1.25rem;">
+      <p class="font-sans" style="font-size: 0.75rem; font-weight: 400; letter-spacing: 0.1em; color: #8A8680;">A. Müller — Zürich, Switzerland</p>
+    </div>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- ═══ JOURNAL / CTA STRIP ═══ -->
+
+<section style="background-color: #1A1A18; padding-top: 6rem; padding-bottom: 6rem;">
+  <div class="px-6 md:px-14 max-w-screen-xl mx-auto flex flex-col md:flex-row items-center md:items-end justify-between gap-10">
+    <div>
+      <p class="label mb-5" style="color: rgba(247,244,239,0.4);">Begin your ritual</p>
+      <h2 class="font-serif" style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; color: #F7F4EF; line-height: 1.1; letter-spacing: -0.01em;">
+        Three products.<br>One standard.
+      </h2>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <button class="btn-hero" style="border-color: rgba(247,244,239,0.4);" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        Shop the Collection
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+
+<footer style="background-color: #F7F4EF; padding-top: 5rem; padding-bottom: 3.5rem; border-top: 1px solid #C8C4BC;">
+  <div class="px-6 md:px-14 lg:px-20 max-w-screen-xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between gap-12 mb-14">
+      <div class="max-w-xs">
+        <p class="font-serif" style="font-size: 1.15rem; font-weight: 300; letter-spacing: 0.15em; margin-bottom: 1rem;">NONTOXICCO</p>
+        <p class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680; line-height: 1.75;">
+          Formulated for those who extend the same care to their oral health as they do to everything else they put on and in their body.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-10 md:gap-16">
+        <div>
+          <p class="label mb-5">Products</p>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Toothpaste</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Mouthwash</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Flossers</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Bundles</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label mb-5">Company</p>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Philosophy</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Ingredients</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Journal</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label mb-5">Account</p>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Sign in</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Orders</a></li>
+            <li><a href="#" class="font-sans" style="font-size: 0.8rem; font-weight: 300; color: #8A8680;">Returns</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="divider mb-8">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="font-sans" style="font-size: 0.72rem; font-weight: 300; color: #C8C4BC; letter-spacing: 0.04em;">
+        &copy; 2024 NONTOXICCO. All rights reserved.
+      </p>
+      <div class="flex gap-7">
+        <a href="#" class="font-sans" style="font-size: 0.72rem; font-weight: 300; color: #C8C4BC; letter-spacing: 0.04em;">Privacy</a>
+        <a href="#" class="font-sans" style="font-size: 0.72rem; font-weight: 300; color: #C8C4BC; letter-spacing: 0.04em;">Terms</a>
+        <a href="#" class="font-sans" style="font-size: 0.72rem; font-weight: 300; color: #C8C4BC; letter-spacing: 0.04em;">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
